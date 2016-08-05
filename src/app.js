@@ -1,9 +1,23 @@
+var dbSetup = require('./db');
 var startServer = require('./server');
+var Promise = require('bluebird');
 
-// TODO move to config
-var PORT = 3000;
+/**
+ * Start the message-store app on hostname:port
+ *
+ * @param {string} dbConfigFilePath - Path to the JSON configuration file
+ * for the database; see README.md
+ * @param {string} hostname - Host to run the app on
+ * @param {integer} port - HTTP port to run the app on
+ *
+ * @returns {Promise} - Resolves to the Express Application once the server
+ * has started
+ */
+var startApp = function (dbConfigFilePath, hostname, port) {
+  // TODO pass db config path to dbSetup from env
+  return dbSetup(dbConfigFilePath).then(function (models) {
+    return startServer(hostname, port, models);
+  });
+};
 
-// TODO make IP address configurable, defaulting to 0.0.0.0, and pass
-// to startServer
-
-startServer(PORT);
+module.exports = startApp;

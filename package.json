@@ -2,6 +2,7 @@
   "name": "message-store",
   "version": "0.0.1",
   "description": "Store simple text messages and retrieve them from a web service.",
+  "repository": "https://github.com/townxelliot/message-store",
   "main": "./src/app.js",
   "bin": "./bin/message-store",
   "scripts": {
@@ -10,6 +11,21 @@
   "author": "Elliot Smith <elliot@townx.org>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.14.0"
+    "bluebird": "^3.4.1",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "nconf": "^0.8.4",
+    "sequelize": "^3.23.6",
+    "sqlite3": "^3.1.4",
+    "umzug": "^1.11.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-jshint": "^2.0.1",
+    "gulp-mocha": "^3.0.0",
+    "jshint": "^2.9.2",
+    "portfinder": "^1.0.5",
+    "supertest": "^2.0.0"
   }
 }
