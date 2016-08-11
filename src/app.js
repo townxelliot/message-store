@@ -14,7 +14,6 @@ var Promise = require('bluebird');
  * has started
  */
 var startApp = function (dbConfigFilePath, hostname, port) {
-  // TODO pass db config path to dbSetup from env
   return dbSetup(dbConfigFilePath).then(function (models) {
     return startServer(hostname, port, models);
   });
