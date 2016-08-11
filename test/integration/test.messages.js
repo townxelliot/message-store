@@ -25,7 +25,7 @@ describe('messages API', function () {
   beforeEach(function (done) {
     findPort()
       .then(function (port) {
-        return startApp(HOSTNAME, port);
+        return startApp(null, HOSTNAME, port);
       })
       .then(function (httpServer) {
         server = httpServer;
