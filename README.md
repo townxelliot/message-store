@@ -1,5 +1,7 @@
 # Message store web service
 
+[![Build Status](https://travis-ci.org/townxelliot/message-store.svg?branch=master)](https://travis-ci.org/townxelliot/message-store)
+
 A simple web service to store and retrieve messages (strings of text).
 
 Example usage of the service (see the next section for details
