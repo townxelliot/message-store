@@ -27,6 +27,6 @@ module.exports = {
 
   down: function (queryInterface, Sequelize) {
     // drop "message" table
-    queryInterface.dropTable('message');
+    queryInterface.dropTable('messages');
   }
 };
