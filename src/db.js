@@ -12,7 +12,9 @@ var migrationsDir = path.join(__dirname, '..', 'migrations');
 /**
  * Apply migrations to the database connected to by conn.
  *
- * @param {Promise} - Resolves to the Sequelize connection, configured and
+ * @param {Sequelize} conn - Configured Sequelize object
+ *
+ * @returns {Promise} - Resolves to the Sequelize connection, configured and
  * with migrations applied
  */
 var applyMigrations = function (conn) {
